@@ -75,13 +75,13 @@ const Contact = () => {
           <form className="grid gap-4">
             <input
               type="text"
-              placeholder="Name (e.g Ananth Ambani)"
+              placeholder="Name (e.g samantha)"
               className="p-3 rounded border border-gray-400 dark:border-gray-600 bg-gray-100 dark:bg-[#222] text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
               required
             />
             <input
               type="email"
-              placeholder="Email (e.g amabani@mail.com)"
+              placeholder="Email (e.g sam@mail.com)"
               className="p-3 rounded border border-gray-400 dark:border-gray-600 bg-gray-100 dark:bg-[#222] text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
               required
             />
