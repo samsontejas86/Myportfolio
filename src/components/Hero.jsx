@@ -2,15 +2,15 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen bg-cover bg-center flex items-center justify-center text-center"
+      className="relative min-h-screen bg-cover bg-center flex items-center justify-center text-center overflow-hidden px-4"
       style={{ backgroundImage: "url('/images/hero.png')" }}
     >
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 hero-outline hero-border transition-colors duration-300">
+      <div className="max-w-7xl w-full mx-auto">
+        <div className="max-w-3xl w-full mx-auto break-words">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 hero-outline hero-border transition-colors duration-300 leading-tight">
             Hi, I'm Samson Tejas
           </h1>
-          <p className="text-xl md:text-2xl font-semibold mb-8 hero-outline hero-border transition-colors duration-300">
+          <p className="text-lg sm:text-xl md:text-2xl font-semibold mb-8 hero-outline hero-border transition-colors duration-300">
             Web Developer • Designer • Learner
           </p>
           <a
@@ -22,8 +22,8 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Social Icons - Clean small tooltip on hover */}
-      <div className="absolute bottom-6 left-6 flex flex-col gap-4 text-white text-xl">
+      {/* Social Icons - Responsive */}
+      <div className="absolute bottom-6 left-6 sm:left-6 sm:bottom-6 flex-col gap-4 text-white text-xl hidden sm:flex">
         {[
           { href: "https://www.linkedin.com/in/samsontejas86/", icon: "fab fa-linkedin", label: "LinkedIn" },
           { href: "https://github.com/samsontejas86", icon: "fab fa-github", label: "GitHub" },
@@ -38,9 +38,29 @@ const Hero = () => {
             className="relative group text-white hover:text-black transition"
           >
             <i className={icon}></i>
-            <div className="tooltip absolute left-10 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black bg-opacity-80 text-white text-sm px-2 py-1 rounded shadow-md whitespace-nowrap">
+            <div className="tooltip absolute left-full ml-2 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black bg-opacity-80 text-white text-sm px-2 py-1 rounded shadow-md whitespace-nowrap max-w-[150px]">
               {label}
             </div>
+          </a>
+        ))}
+      </div>
+
+      {/* Social Icons Bottom Center for Mobile */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-6 text-white text-2xl sm:hidden">
+        {[
+          { href: "https://www.linkedin.com/in/samsontejas86/", icon: "fab fa-linkedin" },
+          { href: "https://github.com/samsontejas86", icon: "fab fa-github" },
+          { href: "https://www.instagram.com/sammmy.x._/", icon: "fab fa-instagram" },
+          { href: "mailto:samsontejas.p@gmail.com", icon: "fas fa-envelope" },
+        ].map(({ href, icon }) => (
+          <a
+            key={icon}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-black transition"
+          >
+            <i className={icon}></i>
           </a>
         ))}
       </div>
