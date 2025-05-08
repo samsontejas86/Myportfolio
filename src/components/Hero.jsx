@@ -22,61 +22,27 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Social Icons - Tooltip appears on hover only */}
+      {/* Social Icons - Clean small tooltip on hover */}
       <div className="absolute bottom-6 left-6 flex flex-col gap-4 text-white text-xl">
-        <a
-          href="https://www.linkedin.com/in/yourprofile"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative group text-white hover:text-black transition"
-        >
-          <i className="fab fa-linkedin"></i>
-          <div className="tooltip absolute left-12 -top-6 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black text-white px-3 py-1 rounded-md shadow-lg">
-            LinkedIn
-          </div>
-        </a>
-        <a
-          href="https://github.com/yourprofile"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative group text-white hover:text-black transition"
-        >
-          <i className="fab fa-github"></i>
-          <div className="tooltip absolute left-12 -top-6 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black text-white px-3 py-1 rounded-md shadow-lg">
-            GitHub
-          </div>
-        </a>
-        <a
-          href="https://www.instagram.com/yourprofile"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative group text-white hover:text-black transition"
-        >
-          <i className="fab fa-instagram"></i>
-          <div className="tooltip absolute left-12 -top-6 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black text-white px-3 py-1 rounded-md shadow-lg">
-            Instagram
-          </div>
-        </a>
-        <a
-          href="mailto:your.email@example.com"
-          className="relative group text-white hover:text-black transition"
-        >
-          <i className="fas fa-envelope"></i>
-          <div className="tooltip absolute left-12 -top-6 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black text-white px-3 py-1 rounded-md shadow-lg">
-            Gmail
-          </div>
-        </a>
-        <a
-          href="https://facebook.com/yourprofile"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative group text-white hover:text-black transition"
-        >
-          <i className="fab fa-facebook"></i>
-          <div className="tooltip absolute left-12 -top-6 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black text-white px-3 py-1 rounded-md shadow-lg">
-            Facebook
-          </div>
+        {[
+          { href: "https://www.linkedin.com/in/samsontejas86/", icon: "fab fa-linkedin", label: "LinkedIn" },
+          { href: "https://github.com/samsontejas86", icon: "fab fa-github", label: "GitHub" },
+          { href: "https://www.instagram.com/sammmy.x._/", icon: "fab fa-instagram", label: "Instagram" },
+          { href: "mailto:samsontejas.p@gmail.com", icon: "fas fa-envelope", label: "Gmail" },
+        ].map(({ href, icon, label }) => (
+          <a
+            key={label}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative group text-white hover:text-black transition"
+          >
+            <i className={icon}></i>
+            <div className="tooltip absolute left-10 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-black bg-opacity-80 text-white text-sm px-2 py-1 rounded shadow-md whitespace-nowrap">
+              {label}
+            </div>
           </a>
+        ))}
       </div>
     </section>
   );
