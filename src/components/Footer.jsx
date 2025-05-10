@@ -1,10 +1,13 @@
 const Footer = () => {
-    return (
-      <footer className="text-center bg-blue-600 text-white py-4 z-50">
-        <p>&copy; {new Date().getFullYear()} SamsonTejas. All rights reserved.</p>
-      </footer>
-    );
-  };
-  
-  export default Footer;
-  
+  return (
+    <footer className="bg-blue-600 text-white py-4 sm:py-6 z-50">
+      <div className="max-w-7xl mx-auto px-4 text-center">
+        <p className="text-sm sm:text-base">
+          &copy; {new Date().getFullYear()} Samson Tejas. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

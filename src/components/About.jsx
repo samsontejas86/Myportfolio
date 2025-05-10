@@ -6,19 +6,20 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-[#1a1a1a] px-4 py-16"
+      className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-[#1a1a1a] px-4 sm:px-6 md:px-12 py-16"
     >
       <motion.div
-        className="flex flex-col md:flex-row items-center md:items-start gap-8 max-w-6xl w-full px-4 md:px-12"
+        className="flex flex-col md:flex-row items-center md:items-start gap-10 max-w-6xl w-full"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
+        {/* Image block */}
         <motion.img
           src="/images/about.jpg"
           alt="About"
-          className="w-60 h-80 sm:w-64 sm:h-96 md:w-72 md:h-96 object-cover rounded-md transition-all duration-300
+          className="w-56 h-72 sm:w-64 sm:h-80 md:w-72 md:h-96 object-cover rounded-md transition-all duration-300
                      drop-shadow-[4px_4px_4px_rgba(0,0,0,0.6)] 
                      dark:drop-shadow-[4px_4px_4px_rgba(255,255,255,0.6)]"
           initial={{ opacity: 0, scale: 0.9 }}
@@ -28,11 +29,11 @@ const About = () => {
         />
 
         {/* Divider for md and above */}
-        <div className="h-[2px] w-20 md:h-64 md:w-[2px] bg-gray-400 dark:bg-gray-600" />
+        <div className="hidden md:block h-64 w-[2px] bg-gray-400 dark:bg-gray-600" />
 
         {/* Text block */}
         <motion.div
-          className="flex flex-col text-center md:text-left max-w-xl"
+          className="flex flex-col text-center md:text-left max-w-xl w-full"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
