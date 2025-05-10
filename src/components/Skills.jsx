@@ -73,7 +73,7 @@ const Skills = () => {
                     { name: "Figma", src: "/images/figma.png" },
                     { name: "Flutter", src: "/images/flutter.png" },
                   ].map((item) => (
-                    <li key={item.name}>
+                    <li key={item.name} className="flex flex-col items-center">
                       <div className="relative group w-24 h-24 flex flex-col items-center justify-center bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition">
                         <img src={item.src} alt={item.name} className="w-12 h-12" />
                         <div className="absolute -top-6 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">
@@ -91,7 +91,7 @@ const Skills = () => {
                     { name: "Tool1", src: "/assets/tool1.png" },
                     // Add more tool icons as needed here...
                   ].map((item) => (
-                    <li key={item.name}>
+                    <li key={item.name} className="flex flex-col items-center">
                       <div className="relative group w-24 h-24 flex flex-col items-center justify-center bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition">
                         <img src={item.src} alt={item.name} className="w-12 h-12" />
                         <div className="absolute -top-6 text-sm bg-gray-800 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition">
